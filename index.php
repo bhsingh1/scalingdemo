@@ -1,5 +1,6 @@
 <?php  
-  echo "Welcome to Red Dias for Sizing your Applications on OpenShift";
+  echo "Welcome to Red Dais for Sizing your Applications on OpenShift";
+  echo "<br>";
   echo "<br>";
   print "We are running on host -> " . gethostname() ." (" . $_SERVER['SERVER_ADDR'] . ")" . "\n";
   echo "<br>";
