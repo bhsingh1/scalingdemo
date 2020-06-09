@@ -24,5 +24,5 @@ if (!$connection=pg_pconnect("$dbhost, $dbuser, $dbpwd, $dbname")) {
     #printf("Connected to the database");
 #}
 #$connection->close();
-#$connection->close();
+$connection->close();
 ?>
