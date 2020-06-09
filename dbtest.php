@@ -1,6 +1,6 @@
 <?php
 $dbhost = getenv("POSTGRESQL_SERVICE_HOST");
-#$dbport = getenv("POSTGRESQL_SERVICE_PORT");
+$dbport = getenv("POSTGRESQL_SERVICE_PORT");
 $dbuser = getenv("databaseuser");
 $dbpwd = getenv("databasepassword");
 $dbname = getenv("databasename");
