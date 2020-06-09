@@ -5,7 +5,7 @@ $dbuser = getenv("databaseuser");
 $dbpwd = getenv("databasepassword");
 $dbname = getenv("databasename");
 
-$db = pg_connect( "$dbhost, $dbuser, $dbpwd, $dbname"  );
+$db = pg_pconnect( "$dbhost, $dbuser, $dbpwd, $dbname"  );
 if(!$db) {
    echo "Error : Unable to open database\n";
 } else {
