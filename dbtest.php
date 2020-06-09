@@ -5,7 +5,7 @@ $dbuser = getenv("databaseuser");
 $dbpwd = getenv("databasepassword");
 $dbname = getenv("databasename");
 
-error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+error_reporting(E_WARNING);
 $connection=pg_connect($dbhost, $dbuser, $dbpwd, $dbname1);
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n");
