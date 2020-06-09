@@ -8,7 +8,7 @@ $dbname = getenv("databasename");
 #error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
 #$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 #$connection=mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
-if (!$connection = pg_connect ("$dbhost, $dbuser, $dbpwd, $dbname")) {
+if (!$connection = pg_connect ("host=localhost, $dbuser, $dbpwd, $dbname")) {
     $error = error_get_last();
     echo "Connection failed. Error was: ". $error['message']. "\n";
 } else {
