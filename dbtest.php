@@ -1,17 +1,13 @@
 <?php
-$dbhost = getenv("POSTGRESQL_SERVICE_HOST");
-$dbport = getenv("POSTGRESQL_SERVICE_PORT");
-$dbuser = getenv("databaseuser");
-$dbpwd = getenv("databasepassword");
-$dbname = getenv("databasename");
+   $host        = "host = sampledb.sample-app-db.svc.cluster.local";
+   $port        = "port = 5432";
+   $dbname      = "dbname = sampledb";
+   $credentials = "user = postgres password=pass123";
 
-error_reporting(E_WARNING);
-$connection=pg_pconnect($dbhost, $dbport, $dbuser, $dbpwd, $dbname);
-if ($connection->connect_errno) {
-    printf("Connect failed: %s\n");
-    exit();
-} else {
-    printf("Connected to the database");
-}
-#$connection->close();
+   $db = pg_connect( "$host $port $dbname $credentials"  );
+   if(!$db) {
+      echo "Error : Unable to open database\n";
+   } else {
+      echo "Opened database successfully\n";
+   }
 ?>
