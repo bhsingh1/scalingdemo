@@ -1,5 +1,5 @@
 <?php  
-  echo "Welcome to a Quick Demo on Containersing your Applications on OpenShift";
+  echo "Welcome to a Quick Demo on Containersing Applications on OpenShift";
   echo "<br>";
   echo "<br>";
   print "We are running on host -> " . gethostname() ." (" . $_SERVER['SERVER_ADDR'] . ")" . "\n";
